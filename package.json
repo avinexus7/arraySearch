@@ -1,0 +1,13 @@
+{
+  "name": "searcharray",
+  "version": "1.0.0",
+  "description": "",
+  "main": "search.js",
+  "scripts": {
+    "start": "node search.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "avinash",
+  "license": "ISC"
+}
