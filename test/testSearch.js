@@ -46,7 +46,6 @@ describe('Search', function() {
     })
 
     describe('target element shouldnt exist in opp types even odd', function() {
-
       it('odd target should not exist in even', function(done) {
         const reqBody = {"array":[63,38,16,53,72,27,83,12,12,3], target: 27}
         var itOptions = {...options}
