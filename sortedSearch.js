@@ -1,4 +1,5 @@
 module.exports.binarySearch = (array, target) => {
+    if (!array.length) return -1
     var startIndex = 0
     var lastIndex = array.length - 1
     /* check if high and low indices store the target value */

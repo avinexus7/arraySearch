@@ -27,7 +27,7 @@ app.post('/search', (req, res) => {
       if (!req.body.target) res.status(400).send('send target value to search for')
       if (req.body.native) {}
       const searchResult = searchUnsorted(req.body.array, req.body.target)
-      if (searchResult.sortedArray && searchResult.targetPos) {
+      if (searchResult.sorted && searchResult.targetPos) {
         res.status(200).send({data: searchResult})
       }
     }
@@ -40,7 +40,7 @@ app.post('/sort', (req, res) => {
   if (req.body) {
     if (Array.isArray(req.body.array)) {
       const searchResult = sort(req.body.array)
-      if (searchResult.array) {
+      if (searchResult) {
         res.status(200).send({data: searchResult})
       }
     }

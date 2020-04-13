@@ -18,8 +18,12 @@ module.exports.native = (array, target) => {
 
 module.exports.sortAndSearch = (array, target) => {
     /* sort the array */
-    const sortedArray = sortArray(array)
+    var sortedArrayResp = sortArray(array)
+    delete sortedArrayResp['odd']
+    delete sortedArrayResp['even']
+    sortedArrayResp.sorted = sortedArrayResp.main
+    delete sortedArrayResp['main']
     /* binary search on sorted array */
-    const targetPos = sortedSearch.binarySearch(sortedArray.array, target)
-    return {sortedArray, targetPos}
+    sortedArrayResp.targetPos = sortedSearch.binarySearch(sortedArrayResp.sorted, target)
+    return sortedArrayResp
 }
