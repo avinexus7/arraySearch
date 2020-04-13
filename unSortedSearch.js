@@ -22,6 +22,7 @@ module.exports.sortAndSearch = (array, target) => {
     sortedArrayResp.sorted = sortedArrayResp.main
     delete sortedArrayResp['main']
     /* binary search on sorted array */
-    sortedArrayResp.targetPos = sortedSearch.binarySearch(sortedArrayResp.sorted, target)
-    return sortedArrayResp
+    const binarySearchResp = sortedSearch.binarySearch(sortedArrayResp.sorted, target)
+    binarySerachResp = {...sortedArrayResp, ...binarySearchResp}
+    return binarySerachResp
 }
