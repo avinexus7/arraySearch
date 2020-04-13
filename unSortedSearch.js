@@ -20,6 +20,6 @@ module.exports.sortAndSearch = (array, target) => {
     /* sort the array */
     const sortedArray = sortArray(array)
     /* binary search on sorted array */
-    const targetPos = sortedSearch.binarySearch(sortedArray, target)
+    const targetPos = sortedSearch.binarySearch(sortedArray.array, target)
     return {sortedArray, targetPos}
 }

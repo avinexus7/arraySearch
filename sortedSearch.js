@@ -7,7 +7,7 @@ module.exports.binarySearch = (array, target) => {
     while(startIndex <= lastIndex) {
         const mid = Math.floor((startIndex + lastIndex) / 2)
         if (array[mid] === target) {
-            return mid - 1
+            return mid
         } else if (array[mid] < target) {
             /* if target is greater than median, search the latter half od array */
             startIndex = mid + 1
