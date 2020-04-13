@@ -14,7 +14,7 @@ describe('Sort', function() {
           
           }
           request(options, function(error, response, data) {
-              expect(data.data.array).to.eql([3, 12, 12, 16, 27, 38, 53, 63, 72, 83])
+              expect(data.data.main).to.eql([3, 12, 12, 16, 27, 38, 53, 63, 72, 83])
               done()
           })
     })

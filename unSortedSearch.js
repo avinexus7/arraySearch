@@ -19,8 +19,6 @@ module.exports.native = (array, target) => {
 module.exports.sortAndSearch = (array, target) => {
     /* sort the array */
     var sortedArrayResp = sortArray(array)
-    delete sortedArrayResp['odd']
-    delete sortedArrayResp['even']
     sortedArrayResp.sorted = sortedArrayResp.main
     delete sortedArrayResp['main']
     /* binary search on sorted array */

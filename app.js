@@ -27,7 +27,7 @@ app.post('/search', (req, res) => {
       if (!req.body.target) res.status(400).send('send target value to search for')
       if (req.body.native) {}
       const searchResult = searchUnsorted(req.body.array, req.body.target)
-      if (searchResult.sorted && searchResult.targetPos) {
+      if (searchResult.sorted) {
         res.status(200).send({data: searchResult})
       }
     }
