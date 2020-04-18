@@ -48,7 +48,7 @@ class ArrayActions:
             sortedArray = self.mergeSort(self.array)
             return sortedArray
 
-    # @Memoize
+    @Memoize
     def mergeSort(self, array):
         if (len(array) < 2):
             return
